@@ -1,0 +1,107 @@
+/* Who's the Spy Game Entry specific styles */
+
+.spy-game-entry {
+    max-width: 500px;
+}
+
+.spy-theme {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+.spy-card {
+    background: rgba(236, 240, 241, 0.95);
+}
+
+.spy-header h1 {
+    color: #2c3e50;
+}
+
+/* Game Mode Selection */
+.game-modes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.game-mode-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    background: #ecf0f1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.game-mode-card:hover {
+    border-color: #3498db;
+    background: #d5dbdb;
+    transform: translateY(-2px);
+}
+
+.game-mode-card.selected {
+    border-color: #2980b9;
+    background: #3498db;
+    color: white;
+}
+
+.game-mode-card.selected .mode-info h4 {
+    color: white;
+}
+
+.game-mode-card.selected .mode-info p {
+    color: #ecf0f1;
+}
+
+.mode-icon {
+    font-size: 2rem;
+    min-width: 3rem;
+    text-align: center;
+}
+
+.mode-info {
+    flex: 1;
+}
+
+.mode-info h4 {
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.mode-info p {
+    margin: 0;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Enhanced game rules */
+.game-rules ul li {
+    margin-bottom: 0.5rem;
+}
+
+.game-rules ul li strong {
+    color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+    }
+    .game-card {
+        padding: 1.5rem;
+    }
+    
+    .game-mode-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .mode-icon {
+        min-width: auto;
+    }
+}

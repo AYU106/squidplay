@@ -1,0 +1,93 @@
+/* Who's the Spy Lobby specific styles */
+
+.spy-lobby {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+.lobby-card {
+    background: rgba(236, 240, 241, 0.95);
+}
+
+.lobby-header h1 {
+    color: #2c3e50;
+}
+
+.room-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.room-code {
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.room-code span {
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.game-mode-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.mode-icon {
+    font-size: 1.2rem;
+}
+
+.mode-name {
+    font-weight: bold;
+}
+
+.mode-time {
+    opacity: 0.9;
+    font-size: 0.8rem;
+}
+
+.spy-players-section .players-list {
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+}
+
+.spy-game-info {
+    background: #d5dbdb;
+    border: 1px solid #95a5a6;
+    color: #2c3e50;
+}
+
+.doppelganger-info {
+    background: #f39c12;
+    color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.doppelganger-info strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .room-info {
+        text-align: center;
+    }
+    
+    .game-mode-info {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}

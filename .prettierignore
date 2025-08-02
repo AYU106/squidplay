@@ -1,0 +1,19 @@
+node_modules
+dist
+build
+.next
+.nuxt
+.cache
+.parcel-cache
+.DS_Store
+*.log
+.env*
+# Disable Prettier for all React/JS files
+src/**/*.js
+src/**/*.jsx
+src/**/*.ts
+src/**/*.tsx
+**/*.js
+**/*.jsx
+**/*.ts
+**/*.tsx

@@ -1,0 +1,32 @@
+/* UNO Game Entry specific styles */
+
+.game-entry {
+    max-width: 500px;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.room-code-display {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.room-code-display strong {
+    font-size: 1.5rem;
+    color: #667eea;
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+    }
+    .game-card {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,19 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# All files
+[*]
+insert_final_newline = false
+trim_trailing_whitespace = false
+
+# JavaScript and React files
+[*.{js,jsx,ts,tsx}]
+# Disable all formatting
+indent_style = ignore
+indent_size = ignore
+end_of_line = ignore
+charset = ignore
+trim_trailing_whitespace = false
+insert_final_newline = false

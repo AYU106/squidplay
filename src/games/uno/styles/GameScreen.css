@@ -1,0 +1,211 @@
+/* UNO Game Screen specific styles */
+
+.game-screen {
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e40af 0%, #7c2d92 20%, #dc2626 40%, #ea580c 60%, #059669 80%, #1e40af 100%);
+    background-size: 400% 400%;
+    animation: gameGradientShift 25s ease infinite;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.game-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(239, 68, 68, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%), radial-gradient(circle at 40% 60%, rgba(34, 197, 94, 0.1) 0%, transparent 50%), radial-gradient(circle at 60% 40%, rgba(251, 191, 36, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+@keyframes gameGradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 100% 50%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 10;
+}
+
+.game-header h2 {
+    color: #333;
+    margin: 0;
+}
+
+.leave-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.leave-btn:hover {
+    background: #c82333;
+}
+
+.game-area {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.top-card-area {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.top-card-area h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.card {
+    width: 80px;
+    height: 120px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.top-card {
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.players-info {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.players-info h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.player-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    background: #f8f9fa;
+}
+
+.player-status.current-turn {
+    background: #d4edda;
+    border: 2px solid #28a745;
+}
+
+.card-count {
+    font-weight: bold;
+    color: #666;
+}
+
+.player-hand {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.player-hand h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.hand-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.hand-card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.hand-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-status {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.game-status p {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.game-note {
+    color: #666 !important;
+    font-style: italic;
+    margin-top: 1rem !important;
+}
+
+@media (max-width: 1024px) {
+    .game-area {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .game-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    .hand-cards {
+        justify-content: flex-start;
+    }
+    .card {
+        width: 60px;
+        height: 90px;
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,115 @@
+/* UNO Lobby specific styles */
+
+.lobby-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.lobby-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.lobby-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.room-code {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.room-code span {
+    font-weight: bold;
+    color: #667eea;
+    font-size: 1.5rem;
+}
+
+.players-section {
+    margin-bottom: 2rem;
+}
+
+.players-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.players-list {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.player-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.player-item:last-child {
+    border-bottom: none;
+}
+
+.player-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.host-badge {
+    background: #667eea;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.lobby-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.game-info {
+    background: #e7f3ff;
+    border: 1px solid #b3d9ff;
+    border-radius: 8px;
+    padding: 1rem;
+    color: #0066cc;
+    text-align: center;
+}
+
+.game-info p {
+    margin-bottom: 0.5rem;
+}
+
+.game-info p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .lobby-actions {
+        flex-direction: column;
+    }
+    .lobby-card {
+        padding: 1.5rem;
+    }
+}
